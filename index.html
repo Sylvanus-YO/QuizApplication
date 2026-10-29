@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizMaster | Test Your Knowledge</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="quiz-container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-screen" id="welcomeScreen">
+
+            <div class="app-logo">Q.</div>
+
+            <p class="eyebrow">THE KNOWLEDGE CHALLENGE</p>
+
+            <h1>Challenge your<br>knowledge.</h1>
+
+            <p class="welcome-description">
+                Test yourself, track your progress, and discover
+                how much you really know.
+            </p>
+
+            <div class="quiz-information">
+                <div class="info-card">
+                    <span class="info-icon">📝</span>
+                    <div>
+                        <strong>5 Questions</strong>
+                        <small>Multiple choice</small>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon">⏱️</span>
+                    <div>
+                        <strong>30 Seconds</strong>
+                        <small>Per question</small>
+                    </div>
+                </div>
+            </div>
+
+            <button class="primary-button" id="startButton">
+                Start Quiz <span>→</span>
+            </button>
+
+            <p class="welcome-footer">
+                FOCUS. THINK. ANSWER.
+            </p>
+
+        </section>
+
+        <!-- Quiz Screen -->
+        <section class="quiz-screen hidden" id="quizScreen">
+
+            <header class="quiz-header">
+                <div class="app-logo small-logo">Q.</div>
+
+                <div class="quiz-header-text">
+                    <strong>QuizMaster</strong>
+                    <small>Knowledge Challenge</small>
+                </div>
+
+                <div class="timer" id="timer">
+                    <span>⏱️</span>
+                    <span id="timeLeft">30</span>s
+                </div>
+            </header>
+
+            <div class="progress-information">
+                <span id="questionCounter">QUESTION 1 OF 5</span>
+                <span id="progressPercentage">20%</span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div class="question-section">
+
+                <p class="eyebrow">YOUR QUESTION</p>
+
+                <h2 id="questionText">
+                    Your question will appear here.
+                </h2>
+
+                <p class="question-instruction">
+                    Select the best answer below.
+                </p>
+
+            </div>
+
+            <div class="answer-options" id="answerOptions">
+                <!-- JavaScript will create the answer buttons here. -->
+            </div>
+
+            <div class="feedback-message" id="feedbackMessage"
+                aria-live="polite">
+            </div>
+
+            <footer class="quiz-footer">
+                <span>Choose carefully.</span>
+
+                <button class="primary-button next-button"
+                    id="nextButton" disabled>
+                    Next Question →
+                </button>
+            </footer>
+
+        </section>
+
+        <!-- Results Screen -->
+        <section class="results-screen hidden" id="resultsScreen">
+
+            <div class="app-logo">Q.</div>
+
+            <p class="eyebrow">QUIZ COMPLETED</p>
+
+            <h1 id="resultHeading">Well done!</h1>
+
+            <p class="results-description" id="resultDescription">
+                Here's how you performed.
+            </p>
+
+            <div class="score-circle">
+                <span id="finalScore">0%</span>
+                <small>YOUR SCORE</small>
+            </div>
+
+            <div class="results-statistics">
+                <div class="result-stat">
+                    <strong id="correctAnswers">0</strong>
+                    <span>Correct</span>
+                </div>
+
+                <div class="result-stat">
+                    <strong id="incorrectAnswers">0</strong>
+                    <span>Incorrect</span>
+                </div>
+            </div>
+
+            <button class="primary-button" id="restartButton">
+                Try Again <span>↻</span>
+            </button>
+
+            <p class="welcome-footer">
+                EVERY ATTEMPT IS PROGRESS.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
